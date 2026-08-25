@@ -4,6 +4,9 @@ const responsive=document.createElement('link');responsive.rel='stylesheet';resp
 document.querySelectorAll('.v2-page-hero > .v2-container > .v2-eyebrow').forEach(el=>el.remove());
 if(!isGitHubPreview){
   document.title=document.title.replace(' — Version 2','');
+  const legacyMedia='https://www.trim-edicine.com/wp-content/uploads/';
+  document.querySelectorAll('img[src]').forEach(img=>{const src=img.getAttribute('src');if(src&&src.startsWith(legacyMedia))img.setAttribute('src','/wp-content/uploads/'+src.slice(legacyMedia.length));});
+  document.querySelectorAll('[style]').forEach(el=>{const style=el.getAttribute('style');if(style&&style.includes(legacyMedia))el.setAttribute('style',style.split(legacyMedia).join('/wp-content/uploads/'));});
   document.querySelectorAll('.v2-note').forEach(el=>el.remove());
   document.querySelectorAll('.v2-person p').forEach(p=>{if(/should be confirmed|production site should retain|production version/i.test(p.textContent))p.remove();});
   document.querySelectorAll('.v2-section-title p').forEach(p=>{if(/Version 2 preview/i.test(p.textContent))p.remove();});
