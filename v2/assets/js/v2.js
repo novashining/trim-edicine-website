@@ -2,6 +2,7 @@ const isGitHubPreview=location.hostname.endsWith('github.io');
 if(!isGitHubPreview){const base=document.querySelector('base');if(base)base.setAttribute('href','/');}
 const polish=document.createElement('link');polish.rel='stylesheet';polish.href=(isGitHubPreview?'assets/css/polish.css':'/v2/assets/css/polish.css')+'?v=4';document.head.appendChild(polish);
 const responsive=document.createElement('link');responsive.rel='stylesheet';responsive.href=(isGitHubPreview?'assets/css/responsive.css':'/v2/assets/css/responsive.css')+'?v=1';document.head.appendChild(responsive);
+const headerSync=document.createElement('link');headerSync.rel='stylesheet';headerSync.href=(isGitHubPreview?'assets/css/header-sync.css':'/v2/assets/css/header-sync.css')+'?v=1';document.head.appendChild(headerSync);
 document.querySelectorAll('.v2-page-hero > .v2-container > .v2-eyebrow').forEach(el=>el.remove());
 if(!isGitHubPreview){
   document.title=document.title.replace(' — Version 2','');
