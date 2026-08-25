@@ -1,18 +1,21 @@
 /* V2 slider motion refinement */
+/* Important: do not mark transform !important here. An !important transform
+   overrides animated transform values and freezes the Ken Burns motion. */
 .slide::before{
-  inset:-9%!important;
-  transform:scale(1.24) translate3d(-2.2%,.4%,0)!important;
+  inset:-10%!important;
+  transform:scale(1.28) translate3d(-2.6%,.6%,0);
   will-change:transform;
+  backface-visibility:hidden;
 }
-.slide:nth-of-type(1)::before{transform-origin:34% 48%!important}
-.slide:nth-of-type(2)::before{transform-origin:68% 44%!important}
-.slide:nth-of-type(3)::before{transform-origin:48% 60%!important}
+.slide:nth-of-type(1)::before{transform-origin:32% 48%!important}
+.slide:nth-of-type(2)::before{transform-origin:70% 44%!important}
+.slide:nth-of-type(3)::before{transform-origin:48% 62%!important}
 .slide.is-active::before{
   animation:kenBurnsV2 6.5s cubic-bezier(.18,.72,.28,1) forwards!important;
 }
 @keyframes kenBurnsV2{
-  from{transform:scale(1.24) translate3d(-2.2%,.4%,0)}
-  to{transform:scale(1.035) translate3d(2.0%,-.8%,0)}
+  0%{transform:scale(1.28) translate3d(-2.6%,.6%,0)}
+  100%{transform:scale(1.035) translate3d(2.2%,-.9%,0)}
 }
 /* Keep arrows vertically centered in every interaction state. */
 .slider-arrow,
