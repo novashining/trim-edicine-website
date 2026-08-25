@@ -12,4 +12,12 @@
 .slider-dots button.is-active{background:var(--brand)}
 .slider-arrow:hover{background:var(--brand)}
 .contact-form input:focus,.contact-form textarea:focus{outline-color:rgba(235,89,74,.18);border-color:var(--brand)}
+/* Ken Burns effect is isolated to the background image only. */
+.slide{background-image:none!important;background-size:auto;background-position:initial;transform:none!important;animation:none!important;isolation:isolate}
+.slide::before{content:"";position:absolute;inset:-3%;background-image:var(--slide-image);background-size:cover;background-position:center;z-index:0;transform:scale(1.05);will-change:transform}
+.slide.is-active{transform:none!important;animation:none!important}
+.slide.is-active::before{animation:kenBurnsBackground 7s ease-out forwards}
+@keyframes kenBurnsBackground{from{transform:scale(1.05)}to{transform:scale(1)}}
+.slide-shade{z-index:1}
+.slide-content{z-index:2}
 @media(max-width:820px){.nav-links{gap:0}.nav-links a{height:auto;border-radius:0;padding:13px 22px;box-shadow:none!important}.nav-links a:hover{background:#fff6f4}.nav-links a[aria-current="page"]{box-shadow:inset 4px 0 0 var(--gold)!important}}
