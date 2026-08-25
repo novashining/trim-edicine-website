@@ -1,0 +1,15 @@
+:root{--brand:#eb594a;--brand-dark:#d84b3e;--brand-soft:#fff1ef;--gold:#f1c769}
+.site-header{border-bottom:1px solid #ececec}
+.nav-links{align-items:center;gap:4px}
+.nav-links a{height:42px;padding:0 14px;border:0;border-radius:2px;background:transparent;color:#4a4a4a;position:relative;box-shadow:none;transition:color .16s ease,box-shadow .16s ease,background .16s ease}
+.nav-links a:hover{background:transparent;color:var(--brand);box-shadow:inset 0 -2px 0 var(--brand)}
+.nav-links a[aria-current="page"]{background:var(--brand);color:#fff;box-shadow:inset 0 3px 0 var(--gold)}
+.nav-links a[aria-current="page"]:hover{background:var(--brand-dark);color:#fff;box-shadow:inset 0 3px 0 var(--gold)}
+.slider-button,.classic-button,.program-label,.legacy-icon{background:var(--brand)}
+.slider-button:hover,.classic-button:hover{background:var(--brand-dark)}
+.home-main h2:after,.content-section h2:after,.recent-news h2:after{background:var(--brand)}
+.text-link,.recent-news strong,.person .role,.news-card time,.status{color:var(--brand-dark)}
+.slider-dots button.is-active{background:var(--brand)}
+.slider-arrow:hover{background:var(--brand)}
+.contact-form input:focus,.contact-form textarea:focus{outline-color:rgba(235,89,74,.18);border-color:var(--brand)}
+@media(max-width:820px){.nav-links{gap:0}.nav-links a{height:auto;border-radius:0;padding:13px 22px;box-shadow:none!important}.nav-links a:hover{background:#fff6f4}.nav-links a[aria-current="page"]{box-shadow:inset 4px 0 0 var(--gold)!important}}
