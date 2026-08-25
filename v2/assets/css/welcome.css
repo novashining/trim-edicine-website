@@ -1,0 +1,19 @@
+/* V2 homepage welcome statement */
+.home-main{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,#fcfaf8 100%)!important}
+.home-main:before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;left:-210px;top:-215px;background:radial-gradient(circle,rgba(235,89,74,.07) 0%,rgba(235,89,74,0) 70%);pointer-events:none}
+.home-columns{position:relative;z-index:1;grid-template-columns:minmax(0,1.08fr) minmax(390px,.92fr)!important;gap:42px!important}
+.welcome-feature{position:relative;min-height:100%;padding:42px 44px 40px;background:linear-gradient(135deg,#fff 0%,#fff 66%,#fff7f4 100%);border:1px solid #e8e2de;border-top:4px solid #eb594a;box-shadow:0 16px 42px rgba(38,39,40,.055);overflow:hidden}
+.welcome-feature:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-90px;bottom:-95px;border:30px solid rgba(235,89,74,.045);pointer-events:none}
+.welcome-kicker{position:relative;z-index:1;margin:0 0 10px!important;color:#cf493c;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.15em;line-height:1.2!important}
+.welcome-feature h2{position:relative;z-index:1;font-size:clamp(34px,3.2vw,43px)!important;line-height:1.12!important;margin:0 0 24px!important;padding:0 0 19px!important;letter-spacing:-.028em!important;font-weight:650!important;color:#292d31!important}
+.welcome-feature h2:after{width:56px!important;height:3px!important}
+.welcome-feature .lead{position:relative;z-index:1;max-width:680px;font-size:18px!important;line-height:1.72!important;color:#454b50!important;margin-bottom:20px!important}
+.welcome-feature>p:not(.welcome-kicker):not(.lead){position:relative;z-index:1;max-width:660px;color:#63696e;font-size:15.5px;line-height:1.75!important;margin-bottom:24px}
+.welcome-actions{position:relative;z-index:1;display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:28px}
+.welcome-actions .classic-button{margin:0!important;padding:12px 22px!important}
+.welcome-link{display:inline-flex;align-items:center;gap:8px;color:#454b50;font-size:13px;font-weight:700;border-bottom:1px solid #d8cfca;padding:7px 0;transition:color .16s ease,border-color .16s ease,gap .16s ease}
+.welcome-link span{color:#eb594a;font-size:17px;line-height:1}
+.welcome-link:hover{color:#cf493c;border-color:#eb594a;gap:11px}
+.recent-news{height:100%;margin:0!important}
+@media(max-width:900px){.home-columns{grid-template-columns:1fr!important}.welcome-feature{padding:34px 30px}.recent-news{height:auto}}
+@media(max-width:560px){.welcome-feature{padding:30px 22px}.welcome-feature h2{font-size:32px!important}.welcome-feature .lead{font-size:16.5px!important}.welcome-actions{gap:16px;align-items:flex-start;flex-direction:column}}
