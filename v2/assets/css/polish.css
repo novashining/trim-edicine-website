@@ -1,0 +1,93 @@
+/* Version 2 visual polish: simpler, more readable, and closer to the approved foundation. */
+
+/* Remove decorative UI that adds clutter without useful information. */
+.v2-hero-meta{display:none!important}
+.v2-page-hero .v2-eyebrow{display:none!important}
+
+/* Subpage hero: quieter and more editorial. */
+.v2-page-hero{padding:54px 0 50px!important;background:linear-gradient(180deg,#faf9f8 0%,#fff 100%)!important;border-bottom:1px solid #ece8e5!important}
+.v2-page-hero:before,.v2-page-hero:after{opacity:.55}
+.v2-page-hero h1{max-width:920px;font-size:clamp(38px,4.4vw,54px)!important;line-height:1.09!important;letter-spacing:-.03em!important;margin-bottom:20px!important;padding-bottom:20px;position:relative}
+.v2-page-hero h1:after{content:"";position:absolute;left:0;bottom:0;width:54px;height:3px;background:#eb594a}
+.v2-page-hero p{max-width:820px!important;font-size:17px!important;line-height:1.72!important;color:#62686d!important}
+
+/* Section hierarchy and readability. */
+.v2-section{padding:68px 0!important}
+.v2-section-title{display:block!important;max-width:900px;margin-bottom:38px!important}
+.v2-section-title>div{max-width:760px}
+.v2-section-title h2{font-size:clamp(29px,3vw,36px)!important;line-height:1.2!important;color:#292d31}
+.v2-section-title p{max-width:760px;margin:15px 0 0!important;font-size:15.5px!important;line-height:1.7!important;color:#6a7075!important}
+.v2-kicker{font-size:10.5px!important;letter-spacing:.12em!important;margin-bottom:8px!important}
+.v2-rule{width:44px!important;height:2px!important;margin-top:16px!important}
+.v2-grid-2{gap:48px!important;align-items:start!important}
+.v2-grid-3{gap:20px!important}
+.v2-copy{max-width:690px;font-size:15.5px!important;line-height:1.78!important}
+.v2-copy p{margin:0 0 18px}
+.v2-callout{margin:0;min-height:220px;padding:36px 38px!important;display:flex;flex-direction:column;justify-content:center;border-top:3px solid #eb594a}
+.v2-callout h3{font-size:24px!important;margin-bottom:12px!important}
+.v2-callout p{line-height:1.72!important}
+.v2-feature-card{padding:28px!important;box-shadow:none!important}
+.v2-feature-card:hover{transform:translateY(-2px)!important;box-shadow:0 12px 32px rgba(35,38,40,.07)!important}
+.v2-feature-card h3{font-size:20px!important}
+.v2-feature-card p{line-height:1.68!important}
+.v2-note{line-height:1.62!important}
+
+/* Technology: make long scientific text easier to scan. */
+.v2-program{gap:38px!important;padding:46px 0!important}
+.v2-program-body{max-width:860px}
+.v2-program-body h2{font-size:30px!important;margin-bottom:18px!important}
+.v2-program-body p{line-height:1.75!important;margin:0 0 16px}
+.v2-publications li{padding:14px 0!important;line-height:1.55}
+
+/* Leadership: slightly lighter cards and clearer reading rhythm. */
+.v2-person{padding:22px!important;box-shadow:0 8px 24px rgba(30,33,35,.035)!important}
+.v2-person p{line-height:1.72!important}
+.v2-people-section{margin-top:44px!important}
+
+/* News and partnership stay clean rather than ornamental. */
+.v2-news-card{padding:22px 24px!important}
+.v2-news-card h3{font-size:18px!important;line-height:1.48!important}
+.v2-partner{box-shadow:none!important;background:#fff!important}
+.v2-partner:hover{box-shadow:0 10px 28px rgba(35,38,40,.06)!important}
+
+/* Contact: clearer form grouping. */
+.v2-form-card,.v2-info-card{padding:32px!important;box-shadow:0 10px 30px rgba(35,38,40,.035)}
+
+/* Homepage polish. Keep the V1 structure and slider behavior, but improve composition. */
+.home-slider{box-shadow:inset 0 -1px 0 rgba(0,0,0,.08)}
+.slide-shade{background:linear-gradient(90deg,rgba(23,24,25,.68) 0%,rgba(23,24,25,.45) 42%,rgba(23,24,25,.10) 72%,rgba(23,24,25,0) 100%)!important}
+.slide-copy{max-width:650px!important}
+.slide-copy h1,.slide-copy h2{letter-spacing:-.025em!important;line-height:1.08!important;text-shadow:0 2px 8px rgba(0,0,0,.28)}
+.slide-copy>p:not(.slide-kicker){max-width:590px;line-height:1.62!important;text-shadow:0 1px 5px rgba(0,0,0,.34)}
+.slider-button{box-shadow:inset 0 3px 0 #f1c769,0 5px 16px rgba(0,0,0,.14)!important}
+.slider-arrow{background:rgba(28,29,30,.48)!important;border:1px solid rgba(255,255,255,.18)!important;transition:background .18s ease,transform .18s ease!important}
+.slider-arrow:hover{background:#eb594a!important;transform:translateY(-1px)}
+
+.home-main{padding:66px 0 70px!important;background:#fff}
+.home-columns{gap:64px!important;align-items:start!important}
+.welcome h2{font-size:34px!important;line-height:1.18!important;letter-spacing:-.02em!important;margin-bottom:24px!important;padding-bottom:17px;position:relative;color:#292d31}
+.welcome h2:after{content:"";position:absolute;left:0;bottom:0;width:48px;height:3px;background:#eb594a}
+.welcome .lead{font-size:17px!important;line-height:1.76!important;color:#50565b!important}
+.welcome p{line-height:1.76!important}
+.classic-button{margin-top:8px;box-shadow:inset 0 3px 0 #f1c769,0 5px 14px rgba(235,89,74,.12)!important}
+.recent-news{background:#fbfaf9!important;border:1px solid #e8e3df!important;padding:28px 30px!important;box-shadow:0 12px 34px rgba(32,34,36,.045)}
+.recent-news h2{font-size:24px!important;margin-top:0!important;padding-bottom:14px!important;border-bottom:2px solid #eb594a!important;color:#2d3034}
+.recent-news li{border-bottom:1px solid #e8e3df!important}
+.recent-news li:last-child{border-bottom:0!important}
+.recent-news a{padding:13px 0!important;transition:color .15s ease,transform .15s ease}
+.recent-news a:hover{color:#cf493c!important;transform:translateX(2px)}
+
+.legacy-strip{padding:34px 0!important;background:#f6f5f3!important;border-top:1px solid #e8e4e0!important;border-bottom:1px solid #e8e4e0!important}
+.legacy-grid{gap:18px!important}
+.legacy-grid>a{background:#fff!important;border:1px solid #e5e1dd!important;padding:20px 22px!important;transition:transform .17s ease,box-shadow .17s ease,border-color .17s ease!important}
+.legacy-grid>a:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(35,38,40,.06);border-color:#dccfc8!important}
+.legacy-grid strong{font-size:17px!important;color:#2d3034}
+.legacy-grid small{color:#777d81!important}
+
+@media(max-width:900px){
+  .v2-page-hero{padding:44px 0 42px!important}
+  .v2-grid-2,.v2-grid-3{grid-template-columns:1fr!important;gap:24px!important}
+  .v2-callout{min-height:auto}
+  .home-columns{gap:38px!important}
+  .legacy-grid{grid-template-columns:1fr!important}
+}
