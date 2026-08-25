@@ -21,6 +21,7 @@ The `initial-build` branch contains the first complete redesign using semantic H
 - Preserve key legacy public URLs
 - Keep historical scientific and business claims conservative until current 2026 status is verified
 - Production is intended for DreamHost after staging review
+- Current preview uses the orange-red TRIM-edicine/SoulMedic variant (`#EB594A`) rather than the cyan default theme
 
 ### Before production launch
 - Verify current pipeline stages
