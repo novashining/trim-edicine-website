@@ -1,11 +1,17 @@
-/* Keep the subpage header/menu dimensions aligned with the homepage header. */
-.v2-topbar{height:35px!important}
+/* Match the subpage header/menu to the homepage header, not just its dimensions. */
+.v2-topbar{height:35px!important;font-family:Arial,Helvetica,sans-serif!important;background:#f4f4f4!important;border-bottom:1px solid #e7e7e7!important;color:#888!important}
+.v2-header{background:#fff!important;backdrop-filter:none!important;border-bottom:1px solid #ececec!important;box-shadow:0 2px 7px rgba(0,0,0,.05)!important}
 .v2-header .v2-container,.v2-topbar .v2-container{width:min(1170px,calc(100% - 40px))!important}
-.v2-nav{min-height:86px!important}
+.v2-nav{min-height:86px!important;gap:28px!important}
 .v2-brand{min-width:270px!important}
 .v2-brand img{width:321px!important}
-.v2-links{display:flex!important;align-items:center!important;align-self:stretch!important;gap:0!important}
-.v2-links a{height:47px!important;padding:0 15px!important;font-size:13px!important;font-weight:700!important;letter-spacing:0!important}
+.v2-links{display:flex!important;align-items:center!important;align-self:stretch!important;gap:0!important;font-family:Arial,Helvetica,sans-serif!important}
+.v2-links a{height:47px!important;display:flex!important;align-items:center!important;padding:0 15px!important;font-family:Arial,Helvetica,sans-serif!important;font-size:13px!important;font-weight:700!important;letter-spacing:0!important;text-transform:uppercase!important;color:#4a4a4a!important;border-top:3px solid transparent!important;border-radius:0!important;box-shadow:none!important;transition:.18s!important}
+.v2-links a:after{display:none!important}
+.v2-links a:hover{color:#d84b3e!important;background:#fafafa!important}
+.v2-links a[aria-current="page"]{background:#eb594a!important;color:#fff!important;border-top-color:#f1c769!important;border-radius:0!important;box-shadow:none!important}
+.v2-links a[aria-current="page"]:hover{background:#eb594a!important;color:#fff!important}
+.v2-menu{font-family:Arial,Helvetica,sans-serif!important}
 
 /* Match the homepage's smaller-desktop treatment instead of collapsing early. */
 @media (min-width:821px) and (max-width:1024px){
@@ -29,9 +35,10 @@
   .v2-brand{min-width:0!important}
   .v2-brand img{width:245px!important}
   .v2-menu{display:block!important}
-  .v2-links{display:none!important;position:absolute!important;top:72px!important;left:0!important;right:0!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;background:#fff!important;border-top:3px solid var(--v2-brand)!important;box-shadow:0 6px 12px rgba(0,0,0,.12)!important}
+  .v2-links{display:none!important;position:absolute!important;top:72px!important;left:0!important;right:0!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;background:#fff!important;border-top:3px solid #eb594a!important;box-shadow:0 6px 12px rgba(0,0,0,.12)!important}
   .v2-links.open{display:flex!important}
-  .v2-links a{height:auto!important;min-height:0!important;padding:13px 22px!important;font-size:11px!important;border-bottom:1px solid #eee!important;border-radius:0!important}
+  .v2-links a{height:auto!important;min-height:0!important;padding:13px 22px!important;font-size:11px!important;border-top:0!important;border-bottom:1px solid #eee!important;border-radius:0!important}
+  .v2-links a[aria-current="page"]{border-top:3px solid #f1c769!important}
 }
 
 @media (max-width:560px){
