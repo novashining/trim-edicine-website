@@ -1,0 +1,303 @@
+/* V2 alignment and responsive refinement */
+
+/* Desktop hero alignment: use the available site grid instead of wrapping too early. */
+.v2-page-hero h1{
+  max-width:1080px!important;
+}
+.v2-page-hero p{
+  max-width:860px!important;
+}
+
+/* Keep long headings visually balanced at intermediate desktop widths. */
+@media (max-width:1180px){
+  .v2-page-hero h1{
+    max-width:1000px!important;
+    font-size:clamp(38px,4.8vw,52px)!important;
+  }
+}
+
+/* Tablet / iPad landscape and smaller laptops */
+@media (max-width:1024px){
+  .v2-container{
+    width:calc(100% - 40px)!important;
+  }
+
+  .v2-nav{
+    min-height:78px!important;
+  }
+  .v2-brand{
+    min-width:0!important;
+  }
+  .v2-brand img{
+    width:270px!important;
+  }
+  .v2-menu{
+    display:block!important;
+    cursor:pointer;
+  }
+  .v2-links{
+    display:none!important;
+    position:absolute;
+    top:78px;
+    left:0;
+    right:0;
+    z-index:120;
+    flex-direction:column;
+    align-items:stretch!important;
+    gap:0!important;
+    background:#fff;
+    border-top:3px solid var(--v2-brand);
+    box-shadow:0 12px 28px rgba(20,24,28,.12);
+  }
+  .v2-links.open{
+    display:flex!important;
+  }
+  .v2-links a{
+    height:auto!important;
+    min-height:48px;
+    padding:13px 22px!important;
+    border-bottom:1px solid #ecebea;
+    border-radius:0!important;
+  }
+  .v2-links a:after{
+    display:none!important;
+  }
+  .v2-links a[aria-current="page"]{
+    box-shadow:inset 4px 0 0 var(--v2-gold)!important;
+  }
+
+  .v2-page-hero{
+    padding:48px 0 46px!important;
+  }
+  .v2-page-hero h1{
+    max-width:none!important;
+    font-size:clamp(36px,5vw,48px)!important;
+    line-height:1.1!important;
+  }
+  .v2-page-hero p{
+    max-width:800px!important;
+    font-size:16.5px!important;
+  }
+
+  .v2-section{
+    padding:58px 0!important;
+  }
+  .v2-grid-3{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .v2-partners{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .v2-program{
+    grid-template-columns:135px minmax(0,1fr)!important;
+    gap:30px!important;
+  }
+  .v2-program-code span{
+    width:92px!important;
+    height:92px!important;
+    font-size:17px!important;
+  }
+  .v2-people{
+    grid-template-columns:1fr!important;
+  }
+  .v2-contact-wrap{
+    grid-template-columns:1fr!important;
+  }
+}
+
+/* iPad portrait / large phones */
+@media (max-width:768px){
+  .v2-topbar{
+    display:none!important;
+  }
+  .v2-container{
+    width:calc(100% - 32px)!important;
+  }
+  .v2-header{
+    top:0!important;
+  }
+  .v2-nav{
+    min-height:72px!important;
+  }
+  .v2-brand img{
+    width:240px!important;
+  }
+  .v2-links{
+    top:72px!important;
+  }
+
+  .v2-page-hero{
+    padding:40px 0 38px!important;
+  }
+  .v2-page-hero:before,
+  .v2-page-hero:after{
+    opacity:.3!important;
+  }
+  .v2-page-hero h1{
+    font-size:clamp(32px,7vw,42px)!important;
+    line-height:1.12!important;
+    letter-spacing:-.025em!important;
+    padding-bottom:17px!important;
+    margin-bottom:17px!important;
+  }
+  .v2-page-hero h1:after{
+    width:46px!important;
+  }
+  .v2-page-hero p{
+    font-size:16px!important;
+    line-height:1.65!important;
+  }
+
+  .v2-section{
+    padding:48px 0!important;
+  }
+  .v2-section-title{
+    margin-bottom:30px!important;
+  }
+  .v2-section-title h2{
+    font-size:clamp(27px,6vw,34px)!important;
+  }
+
+  .v2-grid-2,
+  .v2-grid-3,
+  .v2-partners,
+  .v2-contact-wrap{
+    grid-template-columns:1fr!important;
+  }
+
+  .v2-program{
+    display:block!important;
+    padding:38px 0!important;
+  }
+  .v2-program-code{
+    position:static!important;
+    margin-bottom:22px;
+  }
+  .v2-program-code span{
+    width:88px!important;
+    height:88px!important;
+  }
+  .v2-program-code small{
+    display:inline-block!important;
+    margin:0 0 0 12px!important;
+    vertical-align:middle;
+  }
+  .v2-program-body h2{
+    font-size:28px!important;
+  }
+
+  .v2-person{
+    grid-template-columns:112px minmax(0,1fr)!important;
+    gap:18px!important;
+    padding:18px!important;
+  }
+  .v2-person-photo{
+    width:112px!important;
+    min-height:145px!important;
+  }
+
+  /* Simplify timeline geometry on narrow screens. */
+  .v2-timeline:before,
+  .v2-news:before{
+    display:none!important;
+  }
+  .v2-news{
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+    padding-bottom:24px!important;
+  }
+  .v2-news time{
+    text-align:left!important;
+  }
+
+  .v2-form-card,
+  .v2-info-card{
+    padding:24px!important;
+  }
+
+  /* Homepage V2 also adapts cleanly when viewed on tablets. */
+  .home-columns{
+    grid-template-columns:1fr!important;
+    gap:30px!important;
+  }
+  .welcome-feature,
+  .recent-news{
+    max-width:none!important;
+  }
+}
+
+/* Phones */
+@media (max-width:520px){
+  .v2-container{
+    width:calc(100% - 24px)!important;
+  }
+  .v2-nav{
+    min-height:66px!important;
+  }
+  .v2-brand img{
+    width:210px!important;
+  }
+  .v2-links{
+    top:66px!important;
+  }
+
+  .v2-page-hero{
+    padding:34px 0 32px!important;
+  }
+  .v2-page-hero h1{
+    font-size:31px!important;
+    line-height:1.14!important;
+  }
+  .v2-page-hero p{
+    font-size:15.5px!important;
+  }
+
+  .v2-section{
+    padding:40px 0!important;
+  }
+  .v2-feature-card{
+    padding:22px!important;
+  }
+  .v2-person{
+    grid-template-columns:1fr!important;
+  }
+  .v2-person-photo{
+    width:118px!important;
+    min-height:148px!important;
+  }
+  .v2-people-heading h2{
+    white-space:normal!important;
+  }
+  .v2-publications li{
+    grid-template-columns:48px minmax(0,1fr)!important;
+    gap:12px!important;
+  }
+  .v2-partner{
+    min-height:125px!important;
+    padding:20px!important;
+  }
+  .v2-form-card,
+  .v2-info-card{
+    padding:20px!important;
+  }
+
+  .home-slider{
+    height:360px!important;
+  }
+  .slide-copy{
+    width:88%!important;
+  }
+  .slide h1,
+  .slide h2{
+    font-size:30px!important;
+  }
+  .slide p{
+    font-size:15px!important;
+  }
+  .welcome-feature{
+    padding:25px 22px!important;
+  }
+  .recent-news{
+    padding:22px!important;
+  }
+}
