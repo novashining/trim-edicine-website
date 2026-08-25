@@ -5,6 +5,12 @@ DirectoryIndex index.html index.php
 RewriteEngine On
 RewriteRule ^v2/?$ / [R=301,L]
 RewriteRule ^v2/(about|technology|leadership|news|partnership|contact)/?$ /$1/ [R=301,L]
+
+# Preserve old WordPress news/archive URLs after the static-site migration.
+RewriteRule ^[0-9]{4}/[0-9]{2}/.+/?$ /news/ [R=301,L]
+RewriteRule ^news/page/[0-9]+/?$ /news/ [R=301,L]
+RewriteRule ^category/(news|news-zh-hans)/?$ /news/ [R=301,L]
+RewriteRule ^category/publication/?$ /technology/ [R=301,L]
 </IfModule>
 
 <IfModule mod_expires.c>
