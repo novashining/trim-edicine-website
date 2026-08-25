@@ -3,7 +3,7 @@ name: Deploy V1 and V2 previews to GitHub Pages
 on:
   push:
     branches:
-      - version-2
+      - initial-build
   workflow_dispatch:
 
 permissions:
